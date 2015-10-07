@@ -17,6 +17,11 @@ nconf.set('basedir', __dirname);
 var restify = require('restify');
 restify.cookieParser = require('restify-cookies');
 restify.compression = require('compression');
+restify.i18n = require('i18n');
+restify.i18n.configure({
+  locales: ['en', 'fr'],
+  directory: __dirname + '/locales'
+});
 
 // YouTransfer
 var routes = require('./lib/routes');
@@ -33,6 +38,7 @@ app.use(restify.cookieParser.parse);
 app.use(restify.compression());
 app.use(errors);
 app.use(middleware);
+app.use(restify.i18n.init);
 
 // ------------------------------------------------------------------------------------------ App Routing
 

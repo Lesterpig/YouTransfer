@@ -1,0 +1,6 @@
+{
+	"Warning:": "Warning:",
+	"the base URL is set to %s but you are accessing this page from %s": "the base URL is set to %s but you are accessing this page from %s",
+	"It is recommended to": "It is recommended to",
+	"update the BaseUrl setting": "update the BaseUrl setting"
+}

@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8">
 		<title>{{ title }}</title>
 		<link rel="stylesheet" href="/css/styles.css" />
 		<meta name="baseurl" value="{{ baseUrl }}" />
@@ -11,7 +12,7 @@
 
 		{% if invalidHost %}
 			<div class="baseurl alert alert-warning">
-				<strong>Warning</strong>: the base URL is set to {{ baseUrl }} but you are accessing this page from {{ host }}. It is recommended to <a href="/settings/general/">update the BaseUrl setting</a>.
+				<strong>{{ __('Warning:') }}</strong> {{ __('the base URL is set to %s but you are accessing this page from %s', baseUrl, host) }}. {{ __('It is recommended to') }} <a href="/settings/general/">{{ __('update the BaseUrl setting') }}</a>.
 			</div>
 		{% endif %}
 
